@@ -1,3 +1,11 @@
+:root{
+    --primary-color: plum;
+    --secondary-color: purple;
+    --light-color: white;
+    --dark-color: black;
+    --special-color: tomato;
+}
+
 /* . is class name selector */
 .container {
 margin: 0 auto;
@@ -36,3 +44,55 @@ nav li a:active{
     transform: scale (1.25) translateX(15px);
 }
 /* :link, :visited, :hover, :focus, :active are pseudo classes */
+
+/* [] is for attribute selector */
+a[href="#"]{
+    border: 1px solid plum;
+}
+
+a[href^="http"]{
+    border-left: 8px solid purple;
+}
+
+/* > is child combinator */
+main > p{
+    font-size: 1.25rem;
+}
+
+/* + is adjacent selector */
+h2 + p{
+    background-color: black;
+    color: white;
+    padding: 1rem;
+}
+
+.stars span{
+    cursor: pointer;
+    transition: opacity .5s;
+}
+
+/* is sibling combinator */
+.stars span:hover~span{
+    opacity: .4;
+}
+/* $= is for value ends with */
+a[href$=".pdf"]{
+    color: tomato;
+}
+a[href$=".pdf"]::after{
+    content: "\2193";
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+h2+p::first-line{
+    color: plum;
+}
+
+/* .ratings p::first-letter{} */
+h3+p::first-letter{
+    background-color: purple;
+    color: plum;
+    padding: .25rem;
+    margin-right: .10rem;
+}
