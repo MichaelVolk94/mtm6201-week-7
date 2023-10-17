@@ -4,6 +4,8 @@
     --light-color: white;
     --dark-color: black;
     --special-color: tomato;
+    --medium-font: 1.25rem;
+    --large-font: 2rem;
 }
 
 /* . is class name selector */
@@ -30,7 +32,7 @@ nav li a:visited{
     display: inline-block;
     text-decoration: none;
     text-transform: uppercase;
-    color: black;
+    color: var (--dark-color);
     transition: transform .5s;
 }
 
