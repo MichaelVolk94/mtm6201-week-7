@@ -49,7 +49,7 @@ nav li a:active{
 a[href="#"]{
     border: 1px solid plum;
 }
-
+/* ^= is for start with */
 a[href^="http"]{
     border-left: 8px solid purple;
 }
